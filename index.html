@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interview Setup Guide</title>
+<style>
+  :root {
+    --ink: #1f2937;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-soft: #dbeafe;
+    --bg: #ffffff;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --red: #dc2626;
+    --red-soft: #fee2e2;
+    --green: #16a34a;
+    --green-soft: #dcfce7;
+    --amber: #d97706;
+    --amber-soft: #fef3c7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f9fafb;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 20px 56px; }
+  header.banner {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #fff;
+    border-radius: 14px;
+    padding: 26px 24px;
+    margin-bottom: 24px;
+  }
+  .banner h1 { font-size: 1.5rem; margin-bottom: 6px; }
+  .banner p { font-size: .95rem; opacity: .92; }
+  .banner .urgency {
+    display: inline-block; margin-top: 12px;
+    background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.35);
+    color: #fff; padding: 6px 12px; border-radius: 8px; font-size: .85rem;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px 22px; margin-bottom: 18px;
+  }
+  .card h2 {
+    font-size: 1.15rem; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--accent); color: #fff; font-size: .85rem; font-weight: 700; flex-shrink: 0;
+  }
+  ol.steps { padding-left: 1.2rem; margin: 10px 0; }
+  ol.steps li { margin-bottom: 7px; }
+  ul.tight { padding-left: 1.2rem; margin: 8px 0; }
+  ul.tight li { margin-bottom: 6px; }
+  code.file {
+    background: #eef2ff; color: #3730a3; padding: 1px 7px; border-radius: 5px;
+    font-family: ui-monospace, Menlo, monospace; font-size: .88em;
+  }
+  a { color: var(--accent); word-break: break-all; }
+  .callout {
+    border-radius: 10px; padding: 12px 14px; margin-bottom: 10px;
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .callout .icon { font-size: 1.05rem; flex-shrink: 0; }
+  .callout p { font-size: .93rem; }
+  .callout.red { background: var(--red-soft); border: 1px solid #f5c2c0; }
+  .callout.red p { color: #7f1d1d; }
+  .callout.amber { background: var(--amber-soft); border: 1px solid #f0d9a8; }
+  .callout.amber p { color: #78350f; }
+  .callout.green { background: var(--green-soft); border: 1px solid #bbe7c4; }
+  .callout.green p { color: #14532d; }
+  .note { font-size: .92rem; color: var(--muted); }
+  .check { list-style: none; padding-left: 0; margin: 8px 0; }
+  .check li {
+    padding: 9px 12px; margin-bottom: 6px; background: #f3f4f6;
+    border: 1px solid var(--border); border-radius: 9px;
+    display: flex; align-items: center; gap: 10px; cursor: pointer;
+  }
+  .check input { width: 17px; height: 17px; accent-color: var(--green); flex-shrink: 0; }
+  footer { text-align: center; color: var(--muted); font-size: .82rem; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="banner">
+    <h1>📋 Interview Setup Guide</h1>
+    <p>Everything you need to complete <strong>before</strong> our call — please work through this ahead of time so we don't lose time troubleshooting on the day.</p>
+    <div class="urgency">⏰ We connect <strong>5 minutes before</strong> the interview call.</div>
+  </header>
+
+  <!-- ===================== RUSTDESK ===================== -->
+  <section class="card">
+    <h2><span class="num">1</span> RustDesk Installation — Must Complete Before Interview</h2>
+    <p class="note">Since Chrome Remote Desktop is no longer supported for our sessions, we will use RustDesk. Follow these steps:</p>
+    <ol class="steps">
+      <li>Download the ZIP folder I send you on <strong>WhatsApp</strong>.</li>
+      <li>Unzip/extract the folder.</li>
+      <li>Open the extracted folder and run the <code class="file">.bat</code> file.</li>
+      <li>A Command Prompt window will open. Let it run — it will automatically download and launch RustDesk.</li>
+      <li>Once the RustDesk window appears, click <strong>Install</strong>.</li>
+      <li>Click <strong>Accept and Continue</strong>.</li>
+      <li>RustDesk will be installed and the application will open.</li>
+      <li>You should now see your machine/device ID (code) inside RustDesk.</li>
+      <li>Send me the machine code <strong>through WhatsApp</strong>.</li>
+      <li>I will use that code to connect to your machine.</li>
+    </ol>
+    <div class="callout green">
+      <div class="icon">✅</div>
+      <p>Please complete this setup <strong>before the interview</strong> so we don't lose time troubleshooting installation or connectivity right before the call.</p>
+    </div>
+  </section>
+
+  <!-- ===================== IMPORTANT ===================== -->
+  <section class="card">
+    <h2><span class="num">2</span> Important</h2>
+    <div class="callout red">
+      <div class="icon">📵</div>
+      <p><strong>Don't email me anything.</strong> Send everything through <strong>WhatsApp</strong>.</p>
+    </div>
+    <div class="callout amber">
+      <div class="icon">💻</div>
+      <p>Please <strong>only use a Windows laptop</strong> for the interview. This allows me to also hear the interview audio from my laptop when we connect.</p>
+    </div>
+    <div class="callout amber">
+      <div class="icon">📖</div>
+      <p>Please read the <strong>Cancellation/Rescheduling Policy</strong> below carefully. If you are not comfortable with the policy, let me know immediately and I will refund you.</p>
+    </div>
+  </section>
+
+  <!-- ===================== RESUME ===================== -->
+  <section class="card">
+    <h2><span class="num">3</span> Resume (Must Do)</h2>
+    <ul class="tight">
+      <li>Send me the <strong>exact resume</strong> you submitted for the role.</li>
+    </ul>
+  </section>
+
+  <!-- ===================== INSTALLATION ===================== -->
+  <section class="card">
+    <h2><span class="num">4</span> Installation (Must Have)</h2>
+
+    <h3 style="margin:.4rem 0 .2rem; font-size:1.02rem;">1. Install IntelliJ IDEA Community Edition</h3>
+    <p class="note" style="margin:.2rem 0 .4rem;">Windows: <a href="https://www.jetbrains.com/idea/download/?section=windows">https://www.jetbrains.com/idea/download/?section=windows</a></p>
+    <div class="callout amber" style="margin-bottom:14px;">
+      <div class="icon">⚠️</div>
+      <p><strong>IMPORTANT:</strong> Install only <strong>Community Edition</strong>, NOT Ultimate Edition.</p>
+    </div>
+
+    <h3 style="margin:.4rem 0 .2rem; font-size:1.02rem;">2. Install AnyDesk</h3>
+    <p class="note" style="margin:.2rem 0 .4rem;">Windows: <a href="https://anydesk.com/en">https://anydesk.com/en</a></p>
+
+    <h3 style="margin:1rem 0 .2rem; font-size:1.02rem;">3. Chrome Remote Desktop — No Longer Supported</h3>
+    <p class="note" style="margin:.2rem 0 .6rem;">We previously used Chrome Remote Desktop as the primary connection method. However, it now displays a sharing pop-up during remote sessions, and there is currently no way to disable it.</p>
+    <div class="callout red">
+      <div class="icon">🚫</div>
+      <p><strong>Because of this, we will NOT use Chrome Remote Desktop for the interview.</strong> We will use <strong>RustDesk</strong> instead. I will send the RustDesk installation instructions separately — please complete the installation before the interview and make sure it is working.</p>
+    </div>
+    <div class="callout green">
+      <div class="icon">🔒</div>
+      <p><strong>Please do not share your Gmail credentials or any other passwords with me.</strong></p>
+    </div>
+  </section>
+
+  <!-- ===================== WHEN WE CONNECT ===================== -->
+  <section class="card">
+    <h2><span class="num">5</span> When Will We Connect</h2>
+    <ul class="tight">
+      <li>We will connect <strong>5 minutes before the interview call</strong>.</li>
+    </ul>
+  </section>
+
+  <!-- ===================== OTTER ===================== -->
+  <section class="card">
+    <h2><span class="num">6</span> Otter (Live Transcript)</h2>
+    <ul class="tight">
+      <li>I will share the Otter link approximately <strong>5 minutes before the call</strong>. Otter does not allow me to generate the link ahead of time.</li>
+      <li>Open the Otter link on a <strong>second device</strong> (another screen, laptop, tablet, or phone). If the interviewer asks you to share your screen, it is better to have Otter running separately.</li>
+      <li>The Otter link can be opened directly in a browser. You <strong>do not need to log in</strong> to Otter.</li>
+      <li>It is recommended to use <strong>headphones and Otter together</strong>.</li>
+      <li>If the interviewer asks you not to use headphones, I will mute myself and you can follow Otter instead.</li>
+    </ul>
+  </section>
+
+  <!-- ===================== CANCELLATION POLICY ===================== -->
+  <section class="card">
+    <h2><span class="num">7</span> Cancellation / Rescheduling Policy</h2>
+    <ul class="tight">
+      <li>Any call cancelled or rescheduled <strong>within 4 hours of the scheduled call will not be refunded.</strong></li>
+    </ul>
+    <p class="note" style="margin:.4rem 0 .8rem;">Example: If the call is at <strong>5 PM EST</strong>, the last opportunity to cancel/reschedule for a full refund is <strong>before 1 PM EST</strong>. After 1 PM EST, the full price of the slot will be charged.</p>
+    <ul class="tight">
+      <li>The above 4-hour policy does <strong>not</strong> apply to multi-hour interview preparation sessions (for example: Amazon, Microsoft, Meta, etc.).</li>
+      <li>For multi-hour interview preparation sessions, if the session is cancelled or rescheduled <strong>within 3 days of the interview, the charges will be in full</strong>.</li>
+      <li>If it is cancelled earlier than that, a <strong>full refund will be issued</strong>.</li>
+    </ul>
+  </section>
+
+  <!-- ===================== GENERAL TECH ===================== -->
+  <section class="card">
+    <h2><span class="num">8</span> General Technical Requirements</h2>
+    <ul class="tight">
+      <li>Please test the remote connection with another computer <strong>before the interview</strong>. This helps avoid last-minute connectivity or permission issues.</li>
+      <li>I recommend <strong>not using AirPods Pro</strong> because the noise-cancellation feature can sometimes prevent the interviewer's questions from being heard clearly on my side.</li>
+      <li>Regular AirPods or <strong>wired headphones</strong> are recommended.</li>
+      <li>If you prefer to use AirPods Pro, please test them with someone beforehand and make sure they can clearly hear the audio coming from your laptop.</li>
+    </ul>
+  </section>
+
+  <!-- ===================== CHECKLIST ===================== -->
+  <section class="card">
+    <h2><span class="num">9</span> Pre-Call Checklist</h2>
+    <ul class="check" id="checklist">
+      <li><input type="checkbox" id="c1"><label for="c1">RustDesk installed and machine code sent via WhatsApp</label></li>
+      <li><input type="checkbox" id="c2"><label for="c2">Exact resume sent</label></li>
+      <li><input type="checkbox" id="c3"><label for="c3">IntelliJ IDEA Community Edition installed</label></li>
+      <li><input type="checkbox" id="c4"><label for="c4">AnyDesk installed</label></li>
+      <li><input type="checkbox" id="c5"><label for="c5">Remote connection tested with another computer</label></li>
+      <li><input type="checkbox" id="c6"><label for="c6">Otter opened on a second device (5 min before the call)</label></li>
+      <li><input type="checkbox" id="c7"><label for="c7">Headphones ready (not AirPods Pro unless pre-tested)</label></li>
+      <li><input type="checkbox" id="c8"><label for="c8">Read the Cancellation/Rescheduling Policy</label></li>
+    </ul>
+    <div class="callout green" id="done-msg" style="display:none;">
+      <div class="icon">🎉</div>
+      <p><strong>You're all set!</strong> Everything is checked off — I'll see you 5 minutes before the call.</p>
+    </div>
+  </section>
+
+  <footer>Questions? Everything goes through WhatsApp.</footer>
+</div>
+<script>
+  var boxes = document.querySelectorAll('#checklist input[type=checkbox]');
+  var done = document.getElementById('done-msg');
+  var onToggle = function () {
+    var all = true;
+    for (var i = 0; i < boxes.length; i++) if (!boxes[i].checked) { all = false; break; }
+    done.style.display = all ? 'block' : 'none';
+  };
+  for (var i = 0; i < boxes.length; i++) boxes[i].addEventListener('change', onToggle);
+</script>
+</body>
+</html>
