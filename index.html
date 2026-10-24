@@ -366,6 +366,7 @@
       font-size: .9rem;
     }
     .inline-note strong { color: var(--ink); }
+    .inline-note.critical { border-color: #c98a72; background: var(--accent-soft); color: #6e2b1e; }
     .inline-note.warning { border-color: #d7bf92; background: var(--warning-soft); color: #6c4a1f; }
     .resource-list { list-style: none; padding: 0 !important; }
     .resource-list li {
@@ -394,6 +395,14 @@
     }
     details[open] summary { border-bottom: 1px solid var(--line); }
     .details-body { padding: 4px 0 18px; }
+    .faq-list { padding-top: 8px; border-top: 1px solid var(--line-strong); }
+    .faq-item { max-width: none; margin: 0; }
+    .faq-item summary { padding: 20px 0 10px; color: var(--ink); font-size: 1.05rem; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::marker { content: ""; }
+    .faq-item[open] summary { border-bottom: 0; }
+    .faq-answer { padding: 0 0 20px; color: #4e564e; }
+    .faq-answer p { max-width: 68ch; margin: 0; }
 
     .policy {
       padding: 22px 0;
@@ -470,18 +479,19 @@
         <a href="#before-call">Before the call</a>
         <a href="#five-minutes">Five minutes before</a>
         <a href="#policy">Policy</a>
+        <a href="#faq">FAQ</a>
       </nav>
       <p class="rail-footnote">Keep this page open while you work through the setup.</p>
     </aside>
 
     <main id="main-content">
       <header class="hero">
-        <h1>Make the call feel routine.</h1>
+        <h1>All the best.</h1>
         <p class="hero-lede">Complete the setup before your interview so the call can start without last-minute troubleshooting.</p>
         <div class="meta-row" aria-label="Interview setup requirements">
           <span>Windows laptop</span>
           <span>Resume ready</span>
-          <span>Start 5 minutes early</span>
+          <span>WhatsApp call</span>
         </div>
       </header>
 
@@ -539,12 +549,15 @@
                   <li>Download the ZIP folder I send you on <strong>WhatsApp</strong>.</li>
                   <li>Unzip or extract the folder.</li>
                   <li>Open the extracted folder and run the <code>.bat</code> file.</li>
-                  <li>Let the Command Prompt window run — it will automatically download and launch RustDesk.</li>
-                  <li>When RustDesk opens, click <strong>Install</strong>, then <strong>Accept and Continue</strong>.</li>
+                  <li>Let the PowerShell window run — it will automatically download and launch RustDesk.</li>
+                  <li><strong>Click Install</strong> when the RustDesk window appears.</li>
+                  <li><strong>Click Accept and Continue.</strong> Both of these steps are necessary for a complete setup.</li>
+                  <li>Keep the PowerShell window open until it finishes and shows a message similar to <strong>“Press any key to close this window.”</strong></li>
                   <li>Find your machine or device ID inside RustDesk and send the code through WhatsApp.</li>
                 </ol>
               </div>
             </details>
+            <div class="inline-note critical"><strong>Important: steps 5 and 6 are required.</strong> If RustDesk still shows <strong>Install</strong> on the left side, the setup is not complete. Finish both buttons and wait until PowerShell shows a message similar to <strong>“Press any key to close this window.”</strong></div>
             <div class="inline-note"><strong>Never share a password.</strong> The machine code is not your Gmail password or any other account credential.</div>
           </article>
 
@@ -579,11 +592,15 @@
           <h2 id="five-minutes-title">Five minutes before</h2>
           <span class="section-marker">Final setup</span>
         </div>
-        <p class="section-intro">We will connect five minutes before the interview call. Have the following ready before we start.</p>
+        <p class="section-intro">We will connect five minutes before the interview call. The interview call itself will be through WhatsApp. Have RustDesk, your laptop, and your second device ready before we start.</p>
         <div class="task-list">
           <article class="task">
+            <div class="task-heading"><h3>Join the WhatsApp call</h3><span class="note">Only call used</span></div>
+            <p>We will connect through a WhatsApp call during the interview. I will use RustDesk to listen to the audio from your interview laptop, and WhatsApp will let me listen to what you are saying during the interview.</p>
+          </article>
+          <article class="task">
             <div class="task-heading"><h3>Open the second device</h3><span class="note">Otter</span></div>
-            <p>I will share the Otter link approximately five minutes before the call. Open it on a second device such as another screen, laptop, tablet, or phone.</p>
+            <p>I will share the Otter link approximately five minutes before the call. It is better to open it on a separate device such as another screen, laptop, tablet, or phone — not on the same machine you are using for the interview.</p>
             <ul>
               <li>You can open the link directly in a browser.</li>
               <li>You do not need to log in to Otter.</li>
@@ -604,6 +621,35 @@
           <p class="note">Example: if the call is at 5 PM EST, the last opportunity to cancel or reschedule for a full refund is before 1 PM EST. After 1 PM EST, the full price of the slot will be charged.</p>
           <p>The 4-hour policy does not apply to multi-hour interview preparation sessions such as Amazon, Microsoft, or Meta preparation.</p>
           <p>For multi-hour sessions, cancellations or rescheduling within 3 days of the interview are charged in full. Earlier cancellations receive a full refund.</p>
+        </div>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <h2 id="faq-title">FAQ</h2>
+          <span class="section-marker">Quick answers</span>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>When will we connect?</summary>
+            <div class="faq-answer"><p>We will connect five minutes before the interview call.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How will you listen to the interview audio?</summary>
+            <div class="faq-answer"><p>I will listen to the audio from your interview laptop through RustDesk.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How are we going to connect?</summary>
+            <div class="faq-answer"><p>We will connect through a WhatsApp call during the interview so I can listen to what you are saying.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Where should I keep Otter?</summary>
+            <div class="faq-answer"><p>It is better to keep Otter open on a separate device. Avoid using it on the same machine where you are taking the interview, especially if you may need to share your screen.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Are IntelliJ IDEA and AnyDesk necessary if we already have RustDesk?</summary>
+            <div class="faq-answer"><p>AnyDesk is a backup, so it is good to have installed. IntelliJ IDEA can also be useful because some interviewers ask candidates to share their screen and write code in their own IDE.</p></div>
+          </details>
         </div>
       </section>
 
