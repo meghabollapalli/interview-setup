@@ -518,10 +518,10 @@
             <div class="checklist-count" id="checklist-count">0 / 8</div>
           </div>
           <div class="check-items" id="check-items">
-            <label class="check-item"><input type="checkbox" data-task="remote"><span>RustDesk installed and machine code sent via WhatsApp</span></label>
+            <label class="check-item"><input type="checkbox" data-task="remote"><span>Provided self-hosted RustDesk installed, completed, and machine code sent via WhatsApp</span></label>
             <label class="check-item"><input type="checkbox" data-task="resume"><span>Exact resume sent</span></label>
             <label class="check-item"><input type="checkbox" data-task="idea"><span>IntelliJ IDEA installed</span></label>
-            <label class="check-item"><input type="checkbox" data-task="anydesk"><span>AnyDesk installed</span></label>
+            <label class="check-item"><input type="checkbox" data-task="anydesk"><span>AnyDesk installed as a backup</span></label>
             <label class="check-item"><input type="checkbox" data-task="test"><span>Remote connection tested with another computer</span></label>
             <label class="check-item"><input type="checkbox" data-task="otter"><span>Otter opened on a second device five minutes before the call</span></label>
             <label class="check-item"><input type="checkbox" data-task="headphones"><span>Headphones ready and tested</span></label>
@@ -541,12 +541,12 @@
         <div class="task-list">
           <article class="task" id="remote-access">
             <div class="task-heading"><h3>Set up remote access</h3><span class="note">Required</span></div>
-            <p>We will use RustDesk for the remote session. Complete the installation before the interview and test that it opens correctly.</p>
+            <p>We will use the self-hosted RustDesk build from the ZIP I send you. Complete the installation before the interview and test that it opens correctly.</p>
             <details open>
               <summary>Show the RustDesk steps</summary>
               <div class="details-body">
                 <ol>
-                  <li>Download the ZIP folder I send you on <strong>WhatsApp</strong>.</li>
+                  <li>Download the ZIP folder I send you on <strong>WhatsApp</strong>. <strong>Do not install RustDesk from the internet.</strong></li>
                   <li>Unzip or extract the folder.</li>
                   <li>Open the extracted folder and run the <code>.bat</code> file.</li>
                   <li>Let the PowerShell window run — it will automatically download and launch RustDesk.</li>
@@ -557,6 +557,7 @@
                 </ol>
               </div>
             </details>
+            <div class="inline-note critical"><strong>Use only the provided self-hosted build.</strong> The regular RustDesk download from the internet will not work for this interview because it is not configured for our self-hosted connection. The ZIP build is the intended and more secure option for this setup.</div>
             <div class="inline-note critical"><strong>Important: steps 5 and 6 are required.</strong> If RustDesk still shows <strong>Install</strong> on the left side, the setup is not complete. Finish both buttons and wait until PowerShell shows a message similar to <strong>“Press any key to close this window.”</strong></div>
             <div class="inline-note"><strong>Never share a password.</strong> The machine code is not your Gmail password or any other account credential.</div>
           </article>
@@ -570,7 +571,7 @@
             <div class="task-heading"><h3>Install the interview tools</h3><span class="note">Windows</span></div>
             <ul class="resource-list">
               <li><a href="https://www.jetbrains.com/idea/download/?section=windows" target="_blank" rel="noopener">Download IntelliJ IDEA for Windows</a><small>Java and Kotlin development</small></li>
-              <li><a href="https://anydesk.com/en" target="_blank" rel="noopener">Download AnyDesk</a><small>Keep it installed if requested</small></li>
+              <li><a href="https://anydesk.com/en" target="_blank" rel="noopener">Download AnyDesk</a><small>Backup connection</small></li>
             </ul>
             <div class="inline-note warning"><strong>Chrome Remote Desktop is no longer supported for these sessions.</strong> We will use RustDesk instead.</div>
           </article>
@@ -639,6 +640,10 @@
             <div class="faq-answer"><p>I will listen to the audio from your interview laptop through RustDesk.</p></div>
           </details>
           <details class="faq-item">
+            <summary>Which RustDesk version should I install?</summary>
+            <div class="faq-answer"><p>Install only the self-hosted RustDesk build from the ZIP I send you on WhatsApp. Do not download the regular RustDesk version from the internet — it will not work for this interview because it is not configured for our self-hosted connection.</p></div>
+          </details>
+          <details class="faq-item">
             <summary>How are we going to connect?</summary>
             <div class="faq-answer"><p>We will connect through a WhatsApp call during the interview so I can listen to what you are saying.</p></div>
           </details>
@@ -670,10 +675,10 @@
       const next = document.querySelector('#next-step');
       const complete = document.querySelector('#complete-message');
       const labels = {
-        remote: 'Set up remote access',
+        remote: 'Set up the provided self-hosted RustDesk build',
         resume: 'Send the exact resume',
         idea: 'Install IntelliJ IDEA',
-        anydesk: 'Install AnyDesk',
+        anydesk: 'Install AnyDesk as a backup',
         test: 'Test the remote connection',
         otter: 'Open Otter on the second device',
         headphones: 'Prepare and test your headphones',
@@ -696,7 +701,7 @@
         const nextBox = boxes.find((box) => !box.checked);
         status.textContent = `${completeCount} of ${boxes.length} complete`;
         count.textContent = `${completeCount} / ${boxes.length}`;
-      bar.style.transform = `scaleX(${percentage / 100})`;
+        bar.style.transform = `scaleX(${percentage / 100})`;
         complete.classList.toggle('is-visible', completeCount === boxes.length);
         next.innerHTML = completeCount === boxes.length
           ? 'Next: <strong>Join the call</strong><br><button class="reset-button" id="reset-checklist" type="button">Reset checklist</button>'
